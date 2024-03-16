@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/watch.jpg">
+    <title>Секундомер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="stopwatch">
+        <div class="stopwatch__hours">
+            <span class="hours">
+                00
+            </span>
+            <span class="dash">
+                :
+            </span>
+        </div>
+        <div class="stopwatch__minutes">
+            <span class="minutes">
+                00
+            </span>
+            <span class="dash">
+                :
+            </span>
+        </div>
+        <div class="stopwatch__seconds">
+            <span class="seconds">
+                00
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="watchButtons">
+            <button class="start but">Начать</button>
+            <button class="stop but">Пауза / Пуск</button>
+            <button class="reset but">Сбросить</button>
+            <button class="text but">Записать</button>
+        </div>
+        <div class="textWatch" hidden>
+            <ol class="timeList">
+
+            </ol>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

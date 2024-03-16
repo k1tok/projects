@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+}
+
+.stopwatch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .dash {
+        margin: 0 20px 0 5px;
+    }
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .watchButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+
+        .but {
+            width: 100px;
+            height: 30px;
+            background-color: gray;
+            border: none;
+            transition: 0.5s;
+        }
+
+        .but:hover {
+            background-color: white;
+        }
+    }
+
+    .textWatch{
+        border: 3px solid gray;
+        width: 300px;
+        border-radius: 5%;
+        font-size: 50px;
+        padding: 0 0 0 50px;
+    }
+}
