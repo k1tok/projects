@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import "_var";
+
+@mixin fonts {
+    font-family: $fontRubik;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E55137;
+    color: black;
+}
+
+.randomWord {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 5%;
+    font-size: 75px;
+    @include fonts();
+    color: darkblue;
+
+    .word {
+        border-bottom: 4px solid black;
+        width: 50px;
+    }
+}
+
+
+.letters {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+    font-size: 40px;
+    @include fonts();
+    color: darkblue;
+
+    .letter {
+        cursor: pointer;
+    }
+}
+
+.gallows{
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+
+    .gallowSteps{
+        width: 250px;
+    }
+}
