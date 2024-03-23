@@ -15,21 +15,49 @@ body {
     color: black;
 }
 
+.backButton {
+    margin-top: 20px;
+    margin-left: 10px;
+
+    a {
+        text-decoration: none;
+        @include fonts();
+        font-size: 25px;
+        color: darkblue;
+        transition: 0.5s all;
+    }
+
+    a:hover{
+        color: orange;
+    }
+
+}
+
+.titleTheme {
+    @include fonts();
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
 .randomWord {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     gap: 15px;
-    margin-top: 5%;
-    font-size: 75px;
+    font-size: 75px; // 45
     @include fonts();
     color: darkblue;
+    min-height: 100px; // 50
 
     .word {
         border-bottom: 4px solid black;
-        width: 50px;
+        width: 80px; // 40
+        text-align: center;
     }
+
 }
 
 
@@ -50,15 +78,50 @@ body {
 
     .letter {
         cursor: pointer;
+        transition: 0.5s all;
+    }
+
+    .letter:hover {
+        color: orange;
     }
 }
 
-.gallows{
+.gallows {
     display: flex;
     justify-content: center;
     padding-top: 3%;
 
-    .gallowSteps{
-        width: 250px;
+    .gallowSteps {
+        max-height: 250px;
+    }
+}
+
+@media (max-width:1200px) {
+    .titleTheme {
+        font-size: calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320)));
+    };
+
+    .letters {
+        font-size: calc(25px + (40 - 25) * ((100vw - 320px) / (1200 - 320)));
+    };
+
+    .backButton {
+        a {
+            font-size: calc(20px + (25 - 20) * ((100vw - 320px) / (1200 - 320)));
+        }
+    };
+
+    .randomWord{
+        font-size: calc(40px + (75 - 45) * ((100vw - 320px) / (1200 - 320)));
+        min-height: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
+        .word {
+            width: calc(40px + (80 - 40) * ((100vw - 320px) / (1200 - 320)));
+        }
+    };
+
+    .gallows{
+        .gallowSteps{
+            max-height: calc(175px + (250 - 175) * ((100vw - 320px) / (1200 - 320)));
+        }
     }
 }
