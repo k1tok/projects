@@ -10,7 +10,8 @@ const wordbook = [
     "лев", "тигр", "собака", "курица", "лошадь", "рыба", "медведь", "птица", "акула", "обезьяна",
     "жираф", "черепаха", "лиса", "ёж", "дельфин", "кенгуру", "кошка", "змея", "панда", "коала"
 ];
-const chooseWord = wordbook[Math.floor(Math.random() * wordbook.length)]; //* Рандомно выбранное слово
+
+let chooseWord = wordbook[Math.floor(Math.random() * wordbook.length)]; //* Рандомно выбранное слово
 
 function generateWord() { //* Функция для генерации слова в DOM-дереве
     for (let i = 0; i < chooseWord.length; i++) {
@@ -19,39 +20,50 @@ function generateWord() { //* Функция для генерации слов�
         div.classList.add(`W`);
         wordsBox.append(div);
     };
-}
+};
 
 generateWord();
 
-const guessWord = document.querySelectorAll('.W'); //* Массив блоков для буква выбранного слова
+let guessWord = document.querySelectorAll('.W'); //* Массив блоков для буква выбранного слова
+
 
 
 lettersBox.addEventListener('click', function (e) {
     const target = e.target;
     if ((target.innerHTML).length > 1) return;
 
+    let foundMatch = false; //*  
+
     for (let i = 0; i < chooseWord.length; i++) { //* Проверка победил ли человек
 
         if ((target.innerHTML).toLowerCase() == chooseWord[i].toLowerCase()) {
             guessWord[i].innerHTML = `<span>${target.innerHTML}</span>`;
             checkLength++;
-            if (checkLength == chooseWord.length) setTimeout(() => {
-                alert("Вы победили");
-                location.reload(); //* Перезагрузка для начала новой игры
-            }, 10);
-            return;
-        };
+            foundMatch = true;
 
+            if (checkLength == chooseWord.length) {
+                setTimeout(() => {
+                    alert("Вы победили");
+                    location.reload(); //* Перезагрузка для начала новой игры
+                }, 100);
+            };
+
+        };
     };
 
-    gallowSteps[count].hidden = !gallowSteps[count].hidden; //* Смена фотографий виселицы в случае неправильно выбранной буквы
-    gallowSteps[count + 1].hidden = !gallowSteps[count + 1].hidden;
+    if (!foundMatch) {
+        gallowSteps[count].hidden = !gallowSteps[count].hidden; //* Смена фотографий виселицы в случае неправильно выбранной буквы
+        gallowSteps[count + 1].hidden = !gallowSteps[count + 1].hidden;
 
-    count++; //* Пополнение счётчика попыток
+        count++; //* Пополнение счётчика попыток
 
-    if (count == 6) { //* Обработка поражения
-        setTimeout(() => alert('Вы проиграли!'), 10);
-        location.reload();
+        if (count == 6) { //* Обработка поражения
+            setTimeout(() => {
+                alert('Вы проиграли!');
+                location.reload();
+            }, 100);
+
+        };
     };
 
 });
