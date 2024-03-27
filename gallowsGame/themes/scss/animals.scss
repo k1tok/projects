@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 @import "_var";
 
 @mixin fonts {
@@ -124,4 +123,9 @@ body {
             max-height: calc(175px + (250 - 175) * ((100vw - 320px) / (1200 - 320)));
         }
     }
+}
+
+.disabled{
+    color: gray;
+    pointer-events: none;
 }

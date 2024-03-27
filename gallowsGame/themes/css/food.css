@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E55137;
+  color: black;
+}
+
+.backButton {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.backButton a {
+  text-decoration: none;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: darkblue;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.backButton a:hover {
+  color: orange;
+}
+
+.titleTheme {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: darkblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 15px;
+}
+
+.randomWord {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 15px;
+  font-size: 75px;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: darkblue;
+  min-height: 100px;
+}
+.randomWord .word {
+  border-bottom: 4px solid black;
+  width: 80px;
+  text-align: center;
+}
+
+.letters {
+  padding-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 30px;
+  text-align: center;
+  max-width: 550px;
+  margin: auto;
+  font-size: 40px;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: darkblue;
+}
+.letters .letter {
+  cursor: pointer;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.letters .letter:hover {
+  color: orange;
+}
+
+.gallows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 3%;
+}
+.gallows .gallowSteps {
+  max-height: 250px;
+}
+
+@media (max-width: 1200px) {
+  .titleTheme {
+    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+  }
+  .letters {
+    font-size: calc(25px + 15 * (100vw - 320px) / 880);
+  }
+  .backButton a {
+    font-size: calc(20px + 5 * (100vw - 320px) / 880);
+  }
+  .randomWord {
+    font-size: calc(40px + 30 * (100vw - 320px) / 880);
+    min-height: calc(50px + 50 * (100vw - 320px) / 880);
+  }
+  .randomWord .word {
+    width: calc(40px + 40 * (100vw - 320px) / 880);
+  }
+  .gallows .gallowSteps {
+    max-height: calc(175px + 75 * (100vw - 320px) / 880);
+  }
+}
+.disabled {
+  color: gray;
+  pointer-events: none;
+}

@@ -7,9 +7,8 @@ let count = 0; //* Счётчик попыток
 let checkLength = 0; //* Проверка длины конечного слова
 
 const wordbook = [
-    "лев", "тигр", "собака", "курица", "лошадь", "рыба", "медведь", "птица", "акула", "обезьяна",
-    "жираф", "черепаха", "лиса", "ёж", "дельфин", "кенгуру", "кошка", "змея", "панда", "коала"
-];
+    "пирог", "шашлык", "пицца", "котлета", "рис", "макароны", "курица", "спагетти", "паста",
+    "плов", "гречка", "яблоко", "банан", "арбуз", "лазанья"];
 
 let chooseWord = wordbook[Math.floor(Math.random() * wordbook.length)]; //* Рандомно выбранное слово
 
@@ -37,8 +36,8 @@ lettersBox.addEventListener('click', function (e) {
     for (let i = 0; i < chooseWord.length; i++) { //* Проверка победил ли человек
 
         if ((target.innerHTML).toLowerCase() == chooseWord[i].toLowerCase()) {
-            guessWord[i].innerHTML = `<span>${target.innerHTML}</span>`;
             target.classList.add('disabled');
+            guessWord[i].innerHTML = `<span>${target.innerHTML}</span>`;
             checkLength++;
             foundMatch = true;
 

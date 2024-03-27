@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -58,4 +57,16 @@ body {
 }
 .gameThemes div a:hover {
   color: orange;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: calc(15px + 9 * (100vw - 320px) / 880);
+  }
+  .gameThemes div {
+    width: calc(300px + 100 * (100vw - 320px) / 880);
+  }
+  .gameThemes div a {
+    font-size: calc(30px + 30 * (100vw - 320px) / 880);
+  }
 }

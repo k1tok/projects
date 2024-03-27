@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 @import "_var";
 @import "_reset";
 
@@ -50,4 +49,19 @@ body {
         }
     }
 
+}
+
+@media (max-width:1200px) {
+    .title{
+        font-size: calc(15px + (24 - 15) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .gameThemes{
+        div{
+            width: calc(300px + (400 - 300) * ((100vw - 320px) / (1200 - 320)));
+            a{
+                font-size: calc(30px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+            }
+        }
+    }
 }

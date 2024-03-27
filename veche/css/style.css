@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+nav .navPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px solid gray;
+}
+nav .navPanel__activePage {
+  color: gray;
+}
+nav .navPanel__mainPage {
+  border-right: 1px solid gray;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+nav .navPanel__portfolio {
+  border-right: 1px solid gray;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+nav .navPanel__aboutUs {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}

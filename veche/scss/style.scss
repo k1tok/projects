@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav {
+    .navPanel {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-top: 1px solid gray;
+
+        &__activePage{
+            color: gray;
+        }
+
+        &__mainPage {
+            border-right: 1px solid gray;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            
+        }
+
+        &__portfolio {
+            border-right: 1px solid gray;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        &__aboutUs {
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
