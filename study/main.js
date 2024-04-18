@@ -320,14 +320,16 @@ A.x5 = ['y1'];
 A.x6 = ['y3'];
 A.x7 = ['y4'];
 
-A.x1.y4 = [0.2];
-
 let Y = {};
 
-Y.y1 = [costs[A.x.indexOf('x5')]];
-Y.y2 = [costs[A.x.indexOf('x2')], costs[A.x.indexOf('x3')]];
-Y.y3 = [costs[A.x.indexOf('x4')], costs[A.x.indexOf('x6')]];
-Y.y4 = [costs[A.x.indexOf('x1')], costs[A.x.indexOf('x2')], costs[A.x.indexOf('x7')]];
+for (let i = 0; i < A.y.length; i++) {
+    Y[A.y[i]] = [];
+    for (let j = 0; j < A.x.length; j++) {
+        if (A[A.x[j]].includes(A.y[i])) {
+            Y[A.y[i]].push(costs[j]);
+        }
+    }
+}
 
 let arr = Object.values(Y);
 
@@ -336,4 +338,4 @@ for (let i = 0; i < arr.length; i++) {
     B.push(arr[i].sort((a, b) => b - a).slice(0, 1));
 }
 
-// console.log(B);
+console.log(B);
