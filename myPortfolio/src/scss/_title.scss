@@ -1,0 +1,79 @@
+@import 'vars';
+
+
+.title {
+    background-image: url(../assets/gif/titleWallpaper.gif);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+    @include font();
+    color: white;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        font-size: 40px;
+
+        &__name {
+            color: #c23a3a;
+        }
+    }
+
+    &__button {
+        transition: 0.2s all;
+        border: 3px solid white;
+        padding: 10px;
+        font-size: 20px;
+
+        .arrowImage {
+            transform: rotate(270deg);
+            transition: 0.2s all;
+            width: 40px;
+        }
+    }
+
+    &__button:hover {
+        background-color: teal;
+        transition: 0.2s all;
+
+        .arrowImage {
+            animation: loader1 0.2s linear;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@keyframes loader1 {
+    from {
+        transform: rotate(270deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@media (max-width: 1200px) {
+    .title {
+        &__text {
+            font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320)));
+        }
+
+        &__button {
+            padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1200 - 320)));
+            font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1200 - 320)));
+            
+            .arrowImage{
+                width: calc(30px + (40 - 30) * ((100vw - 320px) / (1200 - 320)))
+            }
+        }
+    }
+
+    // calc(min px + (now - min) * ((100vw - 320px) / (1200 - 320)))
+}

@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import './App.css'
-import './css/reset.css'
+import Navbar from './components/Navbar';
+import Title from './components/Title';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
-      <h1>Привет!</h1>
-      <button>клик</button>
+      <Title />
+      <Navbar />
+      <div className="about">
+        <h1>
+          hi
+        </h1>
+      </div>
+      <div className="about">
+        <h1>
+          hi
+        </h1>
+      </div>
     </div>
   )
 }
