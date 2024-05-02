@@ -1,0 +1,51 @@
+.myIcon {
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid white;
+    border-radius: 10%;
+    overflow: hidden;
+
+    img {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+}
+
+.myIcon:hover {
+    background-color: teal;
+    border-radius: 10%;
+
+    img {
+        animation: appearance 0.4s linear;
+    }
+}
+
+@keyframes appearance {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(50px);
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: hidden;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width:1200px) {
+    .myIcon{
+        img{
+            width: calc(40px + (50 - 40) * ((100vw - 320px) / (1200 - 320)));
+            height: calc(40px + (50 - 40) * ((100vw - 320px) / (1200 - 320)));
+        }
+    }
+}

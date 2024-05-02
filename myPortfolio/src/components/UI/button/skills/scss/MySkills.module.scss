@@ -1,0 +1,19 @@
+@import '../../../../../scss/vars';
+@import '../../../../../scss/mixins';
+
+.mySkills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    .skillsTitle{
+        @include font();
+        font-weight: 600;
+        font-size: 25px;    
+    }
+    .skillsText{
+        @include font();
+        font-weight: 200;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,70 @@
+.myIcon {
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 2px solid white;
+  border-radius: 10%;
+  overflow: hidden;
+}
+.myIcon img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+.myIcon:hover {
+  background-color: teal;
+  border-radius: 10%;
+}
+.myIcon:hover img {
+  -webkit-animation: appearance 0.4s linear;
+          animation: appearance 0.4s linear;
+}
+
+@-webkit-keyframes appearance {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes appearance {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@media (max-width: 1200px) {
+  .myIcon img {
+    width: calc(40px + 10 * (100vw - 320px) / 880);
+    height: calc(40px + 10 * (100vw - 320px) / 880);
+  }
+}

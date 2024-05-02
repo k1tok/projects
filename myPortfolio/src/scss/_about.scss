@@ -1,3 +1,138 @@
-.about{
+.about {
+    margin-top: 8vh;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    &__title {
+        @include titleText();
+        animation: upSet 0.5s linear;
+    }
+
+    &__title::after {
+        @include afterForLine();
+    }
+
+    &__title::before {
+        @include beforeForLine();
+    }
+
+    &__skills {
+        display: flex;
+        gap: 40px;
+        text-align: center;
+        animation: leftSet 0.8s linear;
+    }
+
+    &__profile {
+        display: flex;
+        justify-content: space-around;
+        gap: 100px;
+        @include font();
+        margin-top: 20px;
+        line-height: 22px;
+
+        &__me {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            animation: leftSet 0.7s linear;
+
+            &__title {
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            &__text {
+                font-size: 15px;
+                font-weight: 200;
+                width: 380px;
+
+            }
+        }
+
+        &__mySkills {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            animation: rightSet 0.8s linear;
+
+            &__bars {
+                width: 600px
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .about {
+        &__title {
+            font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1200 - 320)));
+            margin-top: 8vh;
+        }
+
+        &__skills {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
+            margin-top: 0;
+
+            &__me {
+                gap: calc(5px + (10 - 5) * ((100vw - 320px) / (1200 - 320)));
+            }
+
+            &__mySkills {
+                &__bars {
+                    width: calc(340px + (500 - 340) * ((100vw - 320px) / (1200 - 320)));
+                }
+            }
+        }
+    }
+}
+
+@keyframes upSet {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes leftSet {
+    from {
+        transform: translateX(-600px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSet {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }

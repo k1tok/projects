@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const useObserver = (ref, callback1, callback2) => {
     const observer = useRef();
@@ -8,9 +8,9 @@ export const useObserver = (ref, callback1, callback2) => {
             if (entries[0].isIntersecting) {
                 callback1();
             }
-            if (!entries[0].isIntersecting) {
-                callback2()
-            }
+            // if (!entries[0].isIntersecting) {
+            //     callback2()
+            // }
         }
         observer.current = new IntersectionObserver(cb);
         observer.current.observe(ref.current);

@@ -1,5 +1,31 @@
-
-@mixin font{
+@mixin font {
     font-family: $fontComfort;
     font-weight: 700;
+}
+
+@mixin titleText {
+    @include font();
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+@mixin afterForLine {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    bottom: 0;
+    right: 25%;
+}
+
+@mixin beforeForLine {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 25%;
 }

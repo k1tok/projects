@@ -1,0 +1,29 @@
+@import '../../../../scss/vars';
+@import '../../../../scss/mixins';
+
+
+.myBar {
+    display: flex;
+    align-content: center;
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #00538A;
+        color: white;
+        width: 120px;
+        height: 28px;
+        @include font();
+        font-size: 15px;
+    }
+
+    &__fullBar {
+        background-color: gray;
+        width: 100%;
+        height: 28px;
+        &__progressBar {
+            height: 28px;
+            background-color: #00416A;
+        }
+    }
+}

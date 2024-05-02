@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
-import '../css/styles.css'
-import navLogo from '../assets/images/navigation.svg'
+import React, { useContext, useState } from 'react';
+import navLogo from '../assets/images/navigation.svg';
+import '../css/styles.css';
+import { ActivePage } from '../context';
 
-const Navbar = () => {
+const Navbar = ({ pageRefs }) => {
+
+    const { isActivePage } = useContext(ActivePage);
 
     const [isActive, setIsActive] = useState('disable');
     const showMenu = () => {
         isActive == 'disable' ? setIsActive('active') : setIsActive('disable');
     }
+
+    const scrollTo = (refName) => {
+        if (pageRefs[refName].current) {
+            pageRefs[refName].current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+
 
     return (
         <nav className='navPanel'>
@@ -15,16 +26,16 @@ const Navbar = () => {
                 <img onClick={() => showMenu()} className='navLogo' src={navLogo} alt="" />
             </div>
             <div className={['navbar', isActive].join(' ')}>
-                <div className="navbar__home mainLink link">
+                <div onClick={() => {scrollTo('title')}} className={["navbar__home", 'link', isActivePage == 'titleLink' ? 'mainLink' : ''].join(' ')}>
                     ДОМОЙ
                 </div>
-                <div className="navbar__about link">
+                <div onClick={() => {scrollTo('about')}} className={["navbar__about", 'link', isActivePage == 'aboutLink' ? 'mainLink' : ''].join(' ')}>
                     ОБО МНЕ
                 </div>
-                <div className="navbar__portfolio link">
+                <div onClick={() => {scrollTo('projects')}} className={["navbar__portfolio", 'link', isActivePage == 'projectsLink' ? 'mainLink' : ''].join(' ')}>
                     ПОРТФОЛИО
                 </div>
-                <div className="nabar__contact link">
+                <div onClick={() => {scrollTo('contacts')}} className={["navbar__contact", 'link', isActivePage == 'contactLink' ? 'mainLink' : ''].join(' ')}>
                     КОНТАКТЫ
                 </div>
             </div>

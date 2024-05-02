@@ -1,0 +1,73 @@
+.contacts {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #151515;
+    gap: 30px;
+
+    &__title {
+        margin-top: 80px;
+        @include titleText();
+        animation: downSet 0.8s linear;
+    }
+
+    &__title::after {
+        @include afterForLine();
+        background-color: white;
+    }
+
+    &__title::before {
+        @include beforeForLine();
+        background-color: white;
+    }
+
+    &__text {
+        @include font();
+        font-size: 28px;
+        animation: downSet 0.8s linear;
+    }
+
+    &__creator {
+        @include font();
+        animation: downSet 0.8s linear;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 20px;
+        animation: downSet 0.8s linear;
+    }
+}
+
+@media (max-width:1200px) {
+    .contacts {
+        gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+
+        &__title {
+            font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1200 - 320)));
+        }
+
+        &__text {
+            font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1200 - 320)));
+        }
+    }
+
+}
+
+@keyframes downSet {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

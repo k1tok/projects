@@ -5,6 +5,8 @@
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid darkblue;
 
 
     .navbar {
@@ -40,11 +42,12 @@
 
 @media (max-width: 1200px) {
     .navPanel {
+        border: none;
 
         .navbar {
             padding: 0;
             opacity: 0;
-            transition: all 0.4s linear;
+            transition: all 0.25s linear;
             display: flex;
             flex-direction: column;
             font-size: calc(18px + (15 - 18) * ((100vw - 320px) / (1200 - 320)));
@@ -53,14 +56,14 @@
         .disable {
             height: 0;
             padding: 0;
-            animation: navbarSetDisable 0.4s linear;
+            animation: navbarSetDisable 0.25s linear;
             cursor: text;
             transform: translateX(-1000px);
         }
 
         .active {
             height: 210px;
-            animation: navbarSetActive 0.4s linear;
+            animation: navbarSetActive 0.25s linear;
             opacity: 1;
             margin-top: 25px;
         }
