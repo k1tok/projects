@@ -43,8 +43,8 @@ body {
             color: darkblue;
             transition: 0.5s all;
         }
-        
-        a:hover{
+
+        a:hover {
             color: orange;
         }
     }
@@ -52,15 +52,17 @@ body {
 }
 
 @media (max-width:1200px) {
-    .title{
-        font-size: calc(15px + (24 - 15) * ((100vw - 320px) / (1200 - 320)));
+    .title {
+        font-size: calc(10px + (24 - 10) * ((100vw - 320px) / (1200 - 320)));
     }
 
-    .gameThemes{
-        div{
-            width: calc(300px + (400 - 300) * ((100vw - 320px) / (1200 - 320)));
-            a{
-                font-size: calc(30px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+    .gameThemes {
+        div {
+            width: calc(230px + (400 - 230) * ((100vw - 320px) / (1200 - 320)));
+            height: calc(40px + (70 - 40) * ((100vw - 320px) / (1200 - 320)));
+
+            a {
+                font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1200 - 320)));
             }
         }
     }

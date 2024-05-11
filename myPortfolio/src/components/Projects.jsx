@@ -45,7 +45,7 @@ const Projects = ({setRef}) => {
                     text={'JS'}
                     image={watch}
                     linkIt={true}
-                    path={''}
+                    path={'https://htmlpreview.github.io/?https://github.com/k1tok/projects/blob/main/watch/index.html'}
                 />
                 <MyApp
                     title={'Имитированная соц. сеть'}

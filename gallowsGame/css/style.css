@@ -61,12 +61,13 @@ body {
 
 @media (max-width: 1200px) {
   .title {
-    font-size: calc(15px + 9 * (100vw - 320px) / 880);
+    font-size: calc(10px + 14 * (100vw - 320px) / 880);
   }
   .gameThemes div {
-    width: calc(300px + 100 * (100vw - 320px) / 880);
+    width: calc(230px + 170 * (100vw - 320px) / 880);
+    height: calc(40px + 30 * (100vw - 320px) / 880);
   }
   .gameThemes div a {
-    font-size: calc(30px + 30 * (100vw - 320px) / 880);
+    font-size: calc(25px + 25 * (100vw - 320px) / 880);
   }
 }
