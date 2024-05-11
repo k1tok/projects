@@ -1,6 +1,5 @@
 import React from 'react';
 import cl from './css/MyApp.module.css';
-import { Link } from 'react-router-dom';
 
 const MyApp = ({ image, title, text, linkIt, path, ...props }) => {
     return (

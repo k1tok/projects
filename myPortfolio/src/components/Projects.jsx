@@ -45,7 +45,7 @@ const Projects = ({setRef}) => {
                     text={'JS'}
                     image={watch}
                     linkIt={true}
-                    path={'/stopWatch'}
+                    path={''}
                 />
                 <MyApp
                     title={'Имитированная соц. сеть'}
