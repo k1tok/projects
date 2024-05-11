@@ -53,7 +53,7 @@ body {
 
     .word {
         border-bottom: 4px solid black;
-        width: 80px; // 40
+        width: 60px; // 40
         text-align: center;
     }
 
@@ -121,7 +121,7 @@ body {
         min-height: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
 
         .word {
-            width: calc(40px + (80 - 40) * ((100vw - 320px) / (1200 - 320)));
+            width: calc(40px + (60 - 40) * ((100vw - 320px) / (1200 - 320)));
         }
     }
 

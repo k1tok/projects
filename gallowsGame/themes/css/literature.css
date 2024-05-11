@@ -60,7 +60,7 @@ body {
 }
 .randomWord .word {
   border-bottom: 4px solid black;
-  width: 80px;
+  width: 60px;
   text-align: center;
 }
 
@@ -127,7 +127,7 @@ body {
     min-height: calc(50px + 50 * (100vw - 320px) / 880);
   }
   .randomWord .word {
-    width: calc(40px + 40 * (100vw - 320px) / 880);
+    width: calc(40px + 20 * (100vw - 320px) / 880);
   }
   .gallows .gallowSteps {
     max-height: calc(175px + 75 * (100vw - 320px) / 880);
