@@ -20,7 +20,7 @@ body {
     @include fonts();
     color: darkblue;
     h1{
-        font-size: 20px;
+        font-size: 40px;
     }
 }
 
@@ -55,7 +55,9 @@ body {
 
 @media (max-width:1200px) {
     .title {
-        font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
+        h1{
+            font-size: calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
+        }
     }
 
     .gameThemes {
