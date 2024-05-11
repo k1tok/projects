@@ -16,7 +16,7 @@ const Projects = ({setRef}) => {
     });
 
     return (
-        <section className="projects" ref={setRef}>
+        <section ref={setRef} className="projects">
             <div className="projects__title"  ref={projectsLink}>
                 ПРОЕКТЫ
             </div>
@@ -26,6 +26,7 @@ const Projects = ({setRef}) => {
                     text={'JS'}
                     image={gallowGame}
                     linkIt={true}
+                    path={'https://htmlpreview.github.io/?https://github.com/k1tok/projects/blob/main/gallowsGame/index.html'}
                 />
                 <MyApp
                     title={'webovio'}
@@ -44,12 +45,14 @@ const Projects = ({setRef}) => {
                     text={'JS'}
                     image={watch}
                     linkIt={true}
+                    path={'/stopWatch'}
                 />
                 <MyApp
                     title={'Имитированная соц. сеть'}
                     text={'React JS + axios + ...'}
                     image={posts}
                     linkIt={true}
+                    path={'/socialNet'}
                 />
 
 

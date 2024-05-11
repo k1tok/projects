@@ -50,13 +50,16 @@
   font-size: 20px;
 }
 .myApp__info__link {
+  padding: 10px;
+}
+.myApp__info__link__path {
   border: 2px solid #de526c;
   padding: 10px 20px 10px 20px;
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-.myApp__info__link:hover {
+.myApp__info__link__path:hover {
   background-color: #de526c;
   color: white;
 }

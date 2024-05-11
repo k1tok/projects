@@ -14,8 +14,8 @@ const About = ({ setRef }) => {
     });
 
     return (
-        <section className="about" ref={setRef}>
-            <div ref={aboutLink} className="about__title">
+        <section className="about" ref={setRef} >
+            <div className="about__title" ref={aboutLink}>
                 ОБО МНЕ
             </div>
             <div className="about__skills animation">
@@ -77,7 +77,12 @@ const About = ({ setRef }) => {
                     />
                     <MyBar
                         nameSkill={'NPM'}
-                        progress={'75'}
+                        progress={'70'}
+                        myClass={'about__profile__mySkills__bars'}
+                    />
+                    <MyBar
+                        nameSkill={'Vite'}
+                        progress={'70'}
                         myClass={'about__profile__mySkills__bars'}
                     />
                     <MyBar

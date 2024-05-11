@@ -32,7 +32,8 @@
         visibility: hidden;
         transition: all 0.5s;
 
-        &__title, &__text{
+        &__title,
+        &__text {
             pointer-events: none;
         }
 
@@ -46,16 +47,24 @@
         }
 
         &__link {
-            border: 2px solid #de526c;
-            padding: 10px 20px 10px 20px;
-            cursor: pointer;
-            transition: all 0.5s;
+            padding: 10px;
+            &__path {
+                border: 2px solid #de526c;
+                padding: 10px 20px 10px 20px;
+                cursor: pointer;
+                transition: all 0.5s;
+            }
+
+            &__path:hover {
+                background-color: #de526c;
+                color: white;
+            }
         }
 
-        &__link:hover {
-            background-color: #de526c;
-            color: white;
-        }
+        // &__link:hover {
+        //     background-color: #de526c;
+        //     color: white;
+        // }
     }
 
 }

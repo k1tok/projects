@@ -1,7 +1,8 @@
 import React from 'react';
 import cl from './css/MyApp.module.css';
+import { Link } from 'react-router-dom';
 
-const MyApp = ({ image, title, text, linkIt, ...props }) => {
+const MyApp = ({ image, title, text, linkIt, path, ...props }) => {
     return (
         <div {...props} className={cl.myApp}>
 
@@ -17,7 +18,7 @@ const MyApp = ({ image, title, text, linkIt, ...props }) => {
                 </div>
                 {linkIt
                     ? <div className={cl.myApp__info__link}>
-                        ПЕРЕЙТИ
+                        <a className={cl.myApp__info__link__path} target='blank' href={path}>ПЕРЕЙТИ</a>
                     </div>
                     : ''
                 }

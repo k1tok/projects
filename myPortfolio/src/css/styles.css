@@ -344,7 +344,6 @@ legend {
   }
 }
 .about {
-  margin-top: 8vh;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -584,7 +583,7 @@ legend {
   padding-bottom: 10px;
   -webkit-animation: upSet 0.5s linear;
           animation: upSet 0.5s linear;
-  margin-top: 5vh;
+  margin-top: 10vh;
 }
 .projects__title::before {
   content: "";
@@ -740,6 +739,7 @@ legend {
   }
   .contacts__title {
     font-size: calc(30px + 10 * (100vw - 320px) / 880);
+    margin-top: 8vh;
   }
   .contacts__text {
     font-size: calc(20px + 8 * (100vw - 320px) / 880);

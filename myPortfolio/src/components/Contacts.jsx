@@ -15,7 +15,7 @@ const Contacts = ({setRef}) => {
 
 
     return (
-        <footer className='contacts' ref={setRef}>
+        <footer ref={setRef} className='contacts'>
             <div ref={contactsLink} className="contacts__title">
                 КОНТАКТЫ
             </div>

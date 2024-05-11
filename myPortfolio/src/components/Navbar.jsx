@@ -15,8 +15,10 @@ const Navbar = ({ pageRefs }) => {
     const scrollTo = (refName) => {
         if (pageRefs[refName].current) {
             pageRefs[refName].current.scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => setIsActive('disable'), 0);
         }
     };
+
 
 
 

@@ -47,6 +47,7 @@
 
         &__title {
             font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1200 - 320)));
+            margin-top: 8vh;
         }
 
         &__text {
