@@ -6,10 +6,15 @@ body {
     font-size: 100px;
 }
 
+.main {
+    margin-top: 5%;
+}
+
 .stopwatch {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 
     .dash {
         margin: 0 20px 0 5px;
@@ -28,14 +33,16 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
 
         .but {
+            margin-top: 20px;
             width: 100px;
-            height: 30px;
+            height: 40px;
             background-color: gray;
             border: none;
             transition: 0.5s;
+            font-size: 14px;
         }
 
         .but:hover {
@@ -43,11 +50,26 @@ body {
         }
     }
 
-    .textWatch{
+    .textWatch {
         border: 3px solid gray;
         width: 300px;
         border-radius: 5%;
         font-size: 50px;
         padding: 0 0 0 50px;
+    }
+}
+
+@media (max-width:1200px) {
+    body {
+        font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .container {
+        .watchButtons {
+            .but {
+                width: calc(80px + (100 - 80) * ((100vw - 320px) / (1200 - 320)));
+                font-size: calc(11px + (14 - 11) * ((100vw - 320px) / (1200 - 320)));
+            }
+        }
     }
 }
