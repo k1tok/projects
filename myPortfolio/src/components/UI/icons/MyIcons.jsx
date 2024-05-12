@@ -1,10 +1,12 @@
 import React from 'react';
 import cl from './css/MyIcons.module.css'
 
-const MyIcons = ({img}) => {
+const MyIcons = ({ img, path }) => {
     return (
         <div className={cl.myIcon}>
-            <img src={img} alt="" />
+            <a href={path} target='blank'>
+                <img src={img} alt="" />
+            </a>
         </div>
     );
 };
