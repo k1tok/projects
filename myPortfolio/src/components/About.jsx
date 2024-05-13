@@ -87,7 +87,7 @@ const About = ({ setRef }) => {
                     />
                     <MyBar
                         nameSkill={'WEBPACK'}
-                        progress={'0'}
+                        progress={'60'}
                         myClass={'about__profile__mySkills__bars'}
                     />
                 </div>

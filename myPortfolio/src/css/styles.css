@@ -271,8 +271,8 @@ legend {
   .navPanel .disable {
     height: 0;
     padding: 0;
-    -webkit-animation: navbarSetDisable 0.25s linear;
-            animation: navbarSetDisable 0.25s linear;
+    -webkit-animation: navbarSetDisable 0.1s linear;
+            animation: navbarSetDisable 0.1s linear;
     cursor: text;
     -webkit-transform: translateX(-1000px);
         -ms-transform: translateX(-1000px);
